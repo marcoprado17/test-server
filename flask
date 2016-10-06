@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerName www.vps0048.publiccloud.com.br
+
+    WSGIDaemonProcess flaskTest threads=5
+    WSGIScriptAlias / /home/teste-server/wsgi.py
+
+    <Directory /home/teste-server/>
+        WSGIProcessGroup flaskTest
+        WSGIApplicationGroup %{GLOBAL}
+        WSGIScriptReloading On
+        Order deny,allow
+        Allow from all
+
+    </Directory>
+</VirtualHost>

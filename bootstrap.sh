@@ -1,10 +1,13 @@
-apt-get -qqy update
-apt-get install -y apache2
+apt-get update
+apt-get upgrade
+
+apt-get install apache2
+apt-get install python-setuptools
 apt-get install libapache2-mod-wsgi
-apt-get -qqy install postgresql python-psycopg2
-apt-get -qqy install python-flask python-sqlalchemy
-apt-get -qqy install python-pip
-apt-get install git-all
+apt-get install postgresql python-psycopg2
+apt-get install python-flask python-sqlalchemy
+apt-get install python-pip
+
 pip install --upgrade pip
 pip install bleach
 pip install oauth2client
